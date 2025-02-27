@@ -10,10 +10,6 @@ const currentCalculationOutput = document.querySelector('.current-calculation');
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-// console.log('userInput',userInput);
-// console.log('addBtn',addBtn);
-// console.log('currentResultOutput',currentResultOutput);
-
 function getUserInput(){
     return parseInt(userInput.value);
 }
@@ -21,50 +17,42 @@ function outputResult(result,text)
 {
     currentResultOutput.textContent = result;
     currentCalculationOutput.textContent = text;
+    console.log(text);
 }
 
-function add(){
+function compute(type)
+{
+    let calText = '';
+    let result = 0;
     const operand1 = parseFloat(currentResult);
     const operand2 = getUserInput();
-    currentResult = operand1 + operand2;
-    const calText = `${operand1} + ${operand2}`;    
-    console.log('calText: ',calText);
-    outputResult(currentResult,calText);
-}
-
-addBtn.addEventListener('click',add);
-
-function subtract(){
-    const operand1 = parseFloat(currentResult);
-    const operand2 = getUserInput();
-    currentResult = operand1 - operand2;
-    const calText = `${operand1} - ${operand2}`;    
-    console.log('calText: ',calText);
-    outputResult(currentResult,calText);
-}
-
-subtractBtn.addEventListener('click',subtract);
-
-function divide(){
-    const operand1 = parseFloat(currentResult);
-    const operand2 = getUserInput();
-    if(operand2 == 0)alert('Can not divide by 0');
-    else {
-        currentResult = (operand1 / operand2).toFixed(2);
-        const calText = `${operand1} / ${operand2}`;    
-        console.log('calText: ',calText);
-        outputResult(currentResult,calText);
+    switch(type)
+    {
+        case 'add':
+            result = operand1 + operand2;
+            calText = `${operand1} + ${operand2} = ${result}`;
+            break;
+        case 'substract':
+            result = operand1 - operand2;
+            calText = `${operand1} - ${operand2} = ${result}`;
+            break;
+        case 'divide':
+            if(operand2 == 0)alert('Can not divide by 0');
+            else {
+                result = (operand1 / operand2).toFixed(2);
+                calText = `${operand1} / ${operand2} = ${result}`;
+            }
+            break;
+        case 'multiply':
+            result = operand1 * operand2;
+            calText = `${operand1} * ${operand2} = ${result}`;
+            break;
     }
+    currentResult = result;
+    outputResult(result,calText);
 }
 
-divideBtn.addEventListener('click',divide);
-
-function multiply(){
-    const operand1 = parseFloat(currentResult);
-    const operand2 = getUserInput();
-    currentResult = operand1 * operand2;
-    const calText = `${operand1} * ${operand2}`;    
-    console.log('calText: ',calText);
-    outputResult(currentResult,calText);
-}
-multiplyBtn.addEventListener('click',multiply);
+addBtn.addEventListener('click',() => compute('add'));
+subtractBtn.addEventListener('click',() => compute('substract'));
+divideBtn.addEventListener('click',() => compute('divide'));
+multiplyBtn.addEventListener('click',() => compute('multiply'));

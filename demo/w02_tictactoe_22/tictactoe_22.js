@@ -33,5 +33,16 @@ const tieMessage = () => {
     alert.textContent = 'tie!';
 };
 
-// winMessage('x');
-tieMessage();
+winMessage('o');
+// tieMessage();
+
+const reset = () => {
+    alert.style.display = 'none';
+    container.style.backgroundColor = '#666';
+    allLi.forEach(li => {
+        li.textContent = '+';
+        li.classList = '';
+    });
+}
+
+resetBtn.addEventListener('click', reset);

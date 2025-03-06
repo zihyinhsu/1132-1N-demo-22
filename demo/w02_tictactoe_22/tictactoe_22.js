@@ -8,7 +8,20 @@ const alert = document.querySelector('.alert');
 const allLi = document.querySelectorAll('.board li');
 const resetBtn = document.querySelector('.reset');
 
-
+const checkWin = (player) => {
+    let p = [];
+    allLi.forEach(item => {
+        p.push(item.classList.contains(player));
+    });
+    console.log('p', p);
+    const [p1,p2,p3,p4,p5,p6,p7,p8,p9] = p;
+    if(p1 && p2 && p3 || p4 && p5 && p6 || p7 && p8 && p9 || p1 && p4 && p7 || p2 && p5 && p8 || p3 && p6 && p9 || p1 && p5 && p9 || p3 && p5 && p7){
+    return true
+    }
+    return false;
+}
+console.log("checkWin('o')",checkWin('o'));
+console.log("checkWin('x')",checkWin('x'));
 
 const winMessage = (player) => {
     if(player === 'o'){
@@ -33,7 +46,7 @@ const tieMessage = () => {
     alert.textContent = 'tie!';
 };
 
-winMessage('o');
+// winMessage('o');
 // tieMessage();
 
 const reset = () => {

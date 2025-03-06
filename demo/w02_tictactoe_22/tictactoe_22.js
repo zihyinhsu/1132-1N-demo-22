@@ -56,6 +56,33 @@ const reset = () => {
         li.textContent = '+';
         li.classList = '';
     });
+    turn = 0;
+    done = false;
 }
+
+const go = (item, player, text) => {
+    item.textContent = text;
+    item.classList.add(player, 'disabled');
+    if(checkWin(player)){
+        winMessage(player);
+        done = true;
+    }
+}
+
+allLi.forEach(item => {
+    item.addEventListener('click', function(){
+        if(item.classList.contains('disabled')){
+            alert('already filled');
+        }else {
+            if(turn % 2 === 0){
+                go(item, 'o', 'o');
+            }else if(turn % 2 === 1){
+                go(item, 'x', 'x');
+            }
+            if(!done && turn < 8) turn++;
+            else if (!done && turn === 8) tieMessage();
+        }
+    });
+});
 
 resetBtn.addEventListener('click', reset);

@@ -122,30 +122,30 @@ quiz1 可以用你已經完成的檔案，如果用老師的檔案，回答本�
 
 ##### => Github & Vercel URL
 
-[Github demoURL]()
-[Vercel URL]()
+[Github demoURL](https://github.com/zihyinhsu/1132-1N-demo-22)
+[Vercel URL](https://1132-1-n-demo-22.vercel.app/)
 
-![p5_7_xx.png](p5_7_xx.png)
+![alt text](p5-2.png)
 
 ##### => Vercel 端，Chrome 顯示 m1_xx (mid1)
 
-![p5_8_xx.png](p5_8_xx.png)
+![alt text](p5-3.png)
 
 ##### => Vercel 端，Chrome 顯示 m2_xx (mid1)
 
-![p5_9_xx.png](p5_9_xx.png)
+![alt text](p5-4.png)
 
 ##### => Vercel 端，Chrome 顯示 m3_xx (mid1)
 
-![p5_10_xx.png](p5_10_xx.png)
+![alt text](p5-5.png)
 
 ##### => Vercel 端，Chrome 顯示 p1_xx (quiz1)
 
-![p5_11_xx.png](p5_11_xx.png)
+![alt text](p5-6.png)
 
 ##### => Vercel 端，Chrome 顯示 p3_xx (quiz1)
 
-![p5_12_xx.png](p5_12_xx.png)
+![alt text](p5-7.png)
 
 ---
 
@@ -164,11 +164,11 @@ quiz1 可以用你已經完成的檔案，如果用老師的檔案，回答本�
 
 ##### => 顯示 W6~W1 每一週的 log，一週一張圖片，要有 6 張，如果沒有做好，有做的週還是可以剪貼圖片上來，可能有部分分數
 
-![p6_7_xx.png](p6_7_xx.png)
-![p6_8_xx.png](p6_8_xx.png)
-![p6_9_xx.png](p6_9_xx.png)
-![p6_10_xx.png](p6_10_xx.png)
-![p6_11_xx.png](p6_11_xx.png)
-![p6_12_xx.png](p6_12_xx.png)
+![alt text](p6-1.png)
+![alt text](p6-2.png)
+![alt text](p6-3.png)
+![alt text](p6-4.png)
+![alt text](p6-5.png)
+![alt text](p6-6.png)
 
 ---

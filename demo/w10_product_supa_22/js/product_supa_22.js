@@ -1,9 +1,18 @@
-import { mid_products_22 } from './products_data_22.js';
+import { _supabase } from './clientSupabase.js';
 
 const productContainer = document.querySelector('.products-container');
 
-console.log('mid_products_22', mid_products_22);
+let products_22 = [];
 
+const fetchProducts = async () => {
+  try {
+    let { data, error } = await _supabase.from('product_22').select('*');
+    console.log('data', data);
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
 const displayProducts = (products) => {
   let productsContent = products
     .map((product) => {
@@ -27,5 +36,7 @@ const displayProducts = (products) => {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-  displayProducts(mid_products_22);
+  products_22 = await fetchProducts();
+  displayProducts(products_22);
 });
+

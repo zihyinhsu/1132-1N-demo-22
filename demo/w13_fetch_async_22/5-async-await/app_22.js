@@ -30,7 +30,7 @@ const displayItems = (persons) => {
         .map((person) => {
             return `<p>${person.name}</p>`;
         })
-        .join(''); // 連接所有 HTML 字符串
+        .join(''); 
 
     const element = document.createElement('div');
     element.innerHTML = displayData;

@@ -1,0 +1,21 @@
+{
+  "name": "server_22",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server_22",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file-if-exists=.env server_22"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}

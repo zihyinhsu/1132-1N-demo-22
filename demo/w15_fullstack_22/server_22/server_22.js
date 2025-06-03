@@ -1,8 +1,11 @@
 import express from 'express';
+import cors from 'cors';
+import logger from 'morgan';
 import apiProductRouter from './routes/api/apiProductRouter_22.js';
 
 const app = express();
-
+app.use(cors());
+app.use(logger('dev'));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 

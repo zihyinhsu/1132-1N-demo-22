@@ -17,6 +17,14 @@ app.use('/product_22/static', (req, res, next) => {
     });
 })
 
+app.use('/blog_22/static', (req, res, next) => {
+    res.render('blog_22/static_22', {
+        title: 'Get Blogs - Static',
+        name: 'Zihyin Hsu',
+        id: '913410022',
+    });
+})
+
 app.use('/api/product_22', apiProductRouter);
 
 app.use('/', (req, res, next) => {
